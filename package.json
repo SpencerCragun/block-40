@@ -3,23 +3,25 @@
   "version": "1.0.0",
   "description": "Market is our latest e-commerce platform that will allow users to browse and purchase a wide selection of products.",
   "main": "server.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@faker-js/faker": "^9.0.3",
-    "nodemon": "^3.1.7"
-  },
   "dependencies": {
-    "@prisma/client": "^5.22.0",
-    "bcrypt": "^5.1.1"
+    "@prisma/client": "^5.21.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "prisma": "^5.21.0"
   },
   "prisma": {
     "seed": "node prisma/seed.js"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.3",
+    "nodemon": "^3.1.7"
   }
 }
