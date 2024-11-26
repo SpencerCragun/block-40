@@ -1,12 +1,15 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const PORT = 3000;
 
-require("dotenv").config();
 
 app.use(express.json());
 
 app.use(require("./api/auth").router);
+app.use("/orders", require("./api/orders"));
+app.use("/products", require("./api/products"));
+
 
 app.use((req, res, next) => {
   next({ status: 404, message: "Endpoint not found." });
